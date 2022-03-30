@@ -2,7 +2,7 @@
 
 ## Description
 
-Sample code for obtaining static Neutron Star solutions in regularized 4D Einstein-Gauss-Bonnet gravity using the KEH/CST numerical scheme
+Sample code for obtaining static Neutron Star solutions in regularized 4D Einstein-Gauss-Bonnet gravity using the KEH/CST numerical scheme.
 
 ## Usage
 
