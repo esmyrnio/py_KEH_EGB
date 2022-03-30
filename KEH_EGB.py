@@ -30,9 +30,9 @@ kscale = 1.112668301525780e-36
 kappa = 1.112668301525780e-36*2.9979e10*2.9979e10
 
 
-url_intermediate_e_c = "https://raw.github.com/esmyrnio/rns_tab_sly/main/sly_out.txt"
-url_high_e_c = "https://raw.github.com/esmyrnio/rns_tab_sly/main/high_ec_data_sly.txt"
-url_low_e_c = "https://raw.github.com/esmyrnio/rns_tab_sly/main/starting_ec_03_rns_solution.txt"
+url_intermediate_e_c = "https://raw.github.com/esmyrnio/KEH_4DEGB/main/guess_solutions/intermediate_e_c.txt"
+url_high_e_c = "https://raw.github.com/esmyrnio/KEH_4DEGB/main/guess_solutions/high_e_c.txt"
+url_low_e_c = "https://raw.github.com/esmyrnio/KEH_4DEGB/main/guess_solutions/low_e_c.txt"
 
 #LOAD EOS FILE
 
