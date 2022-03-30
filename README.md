@@ -8,7 +8,7 @@ Sample code for obtaining static Neutron Star solutions in regularized 4D Einste
 
 run python KEH_EGB.py
 
-KEH_EGB.py  7 inputs in-turn:
+KEH_EGB.py takes 7 inputs in-turn:
 
 1. The EoS file name (e.g. eosSLY.txt).
 2. The central energy density in CGS/10^15 (e.g 1.2).
