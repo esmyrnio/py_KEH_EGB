@@ -6,7 +6,7 @@ Sample code for obtaining static Neutron Star solutions in regularized 4D Einste
 
 ## Usage
 
-python KEH_EGB.py
+run python KEH_EGB.py
 
 KEH_EGB.py  7 inputs in-turn:
 
