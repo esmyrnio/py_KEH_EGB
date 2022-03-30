@@ -25,9 +25,8 @@ Length = G*Msun/c**2
 Time = Length/c
 Density = Msun/Length**3
 length_squared = 1.346790806509621e+13/pow(100000,2)  # (km^2)
-len_squared = 1.346790806509621e+13 # (cm^2)
 kscale = 1.112668301525780e-36
-kappa = 1.112668301525780e-36*2.9979e10*2.9979e10
+kappa = 1.346790806509621e+13
 
 
 url_intermediate_e_c = "https://raw.github.com/esmyrnio/KEH_4DEGB/main/guess_solutions/intermediate_e_c.txt"
@@ -380,8 +379,8 @@ while True:
 
 r = np.sqrt(r_e)*s/(1-s)
 
-gravitational_mass = 2*r[N-3]*(np.sqrt(np.exp(mu_new[N-3]))-1)*np.sqrt(len_squared)*(c*c/G)/Msun
-circumferential_radius = np.sqrt(r_e)*np.exp(mu_new[surface_indx])*np.sqrt(len_squared)/pow(10,5)
+gravitational_mass = 2*r[N-3]*(np.sqrt(np.exp(mu_new[N-3]))-1)*np.sqrt(kappa)*(c*c/G)/Msun
+circumferential_radius = np.sqrt(r_e)*np.exp(mu_new[surface_indx])*np.sqrt(kappa)/pow(10,5)
 
 if print_option == 0:
 
