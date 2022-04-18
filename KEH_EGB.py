@@ -1,6 +1,5 @@
 import numpy as np
 import scipy
-import matplotlib.pyplot as plt
 import math
 
 from scipy import integrate
@@ -29,16 +28,20 @@ kscale = 1.112668301525780e-36
 kappa = 1.346790806509621e+13
 
 
-url_intermediate_e_c = "https://raw.github.com/esmyrnio/py_KEH_4DEGB/main/guess_solutions/intermediate_e_c.txt"
-url_high_e_c = "https://raw.github.com/esmyrnio/py_KEH_4DEGB/main/guess_solutions/high_e_c.txt"
-url_low_e_c = "https://raw.github.com/esmyrnio/py_KEH_4DEGB/main/guess_solutions/low_e_c.txt"
+url_intermediate_e_c = "https://raw.github.com/esmyrnio/py_KEH_EGB/main/guess_solutions/intermediate_e_c.txt"
+url_high_e_c = "https://raw.github.com/esmyrnio/py_KEH_EGB/main/guess_solutions/high_e_c.txt"
+url_low_e_c = "https://raw.github.com/esmyrnio/py_KEH_EGB/main/guess_solutions/low_e_c.txt"
+
+
 
 #LOAD EOS FILE
 
 def load_eos(eos_file):
 
-    f_eos = open(eos_file,"r")
-    rho,p,h,n0 = np.loadtxt(eos_file, skiprows=1, unpack=True)
+    path="EoS/"
+
+    f_eos = open(path+eos_file,"r")
+    rho,p,h,n0 = np.loadtxt(path+eos_file, skiprows=1, unpack=True)
 
     global log_e, log_p, log_h, log_n0
 
@@ -388,9 +391,9 @@ if print_option == 0:
     print(" %s                  " % eos_name);    
     print(" %6.5e  e_c           (10^15 gr/cm^3)\n" % ec_t);
     print(" %2.2e     relative error            " % relative_error);
-    print(" %.1f     max iterations            " % max_iter);
-    print(" %.2f     relaxation factor            \n" % under_relaxation_factor);
-    print(" %.2f     alpha            \n" % a);
+    print(" %.1f        max iterations            " % max_iter);
+    print(" %.2f         relaxation factor            \n" % under_relaxation_factor);
+    print(" %.2f        alpha            (km^2)\n" % (a*length_squared));
     print(" %6.5e  Mass             (M_sun)\n" % gravitational_mass);
     print(" %6.5e  Radius             (km)\n" % circumferential_radius);
 else:
@@ -399,9 +402,9 @@ else:
     print(" %s                  " % eos_name);    
     print(" %6.5e  e_c           (10^15 gr/cm^3)\n" % ec_t);
     print(" %2.2e     relative error            " % relative_error);
-    print(" %.1f     max iterations            " % max_iter);
-    print(" %.2f     relaxation factor            \n" % under_relaxation_factor);
-    print(" %.2f     alpha            \n" % a);
+    print(" %.1f        max iterations            " % max_iter);
+    print(" %.2f         relaxation factor            \n" % under_relaxation_factor);
+    print(" %.2f        alpha            (km^2)\n" % (a*length_squared));
     print(" %6.5e  Mass             (M_sun)\n" % gravitational_mass);
     print(" %6.5e  Radius             (km)\n" % circumferential_radius);
     print("\n");
