@@ -224,7 +224,7 @@ a = double(input())/length_squared # KM^2/length^2
 
 # DEFINE MONITORING FACTORS
 relative_error = double(input())
-max_iter = double(input())
+max_iter = int(input())
 
 # DEFINE UNDER-RELAXATION FACTOR
 
